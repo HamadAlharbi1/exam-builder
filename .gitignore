@@ -108,6 +108,10 @@ questions/
 !README.md
 !example*.md
 !.gitkeep
+!QUICK_START.md
+!GITHUB_SETUP.md
+!CONTRIBUTING.md
+!deploy.md
 
 # Temporary files
 tmp/
