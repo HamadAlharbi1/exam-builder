@@ -6,7 +6,7 @@
 
 1. اذهب إلى [github.com](https://github.com)
 2. انقر على "+" → "New repository"
-3. اسم المستودع: `qa-test-generator`
+3. اسم المستودع: `exam-builder`
 4. اختر Public
 5. فعّل "Add a README file"
 6. انقر "Create repository"
@@ -15,7 +15,7 @@
 
 ```bash
 # إضافة Remote (استبدل YOUR_USERNAME باسم المستخدم)
-git remote add origin https://github.com/YOUR_USERNAME/qa-test-generator.git
+git remote add origin https://github.com/YOUR_USERNAME/exam-builder.git
 
 # رفع الكود
 git branch -M main
@@ -27,7 +27,7 @@ git push -u origin main
 1. اذهب إلى [vercel.com](https://vercel.com)
 2. سجل دخول بـ GitHub
 3. انقر "New Project"
-4. اختر مستودع `qa-test-generator`
+4. اختر مستودع `exam-builder`
 5. انقر "Deploy"
 
 ## استخدام التطبيق

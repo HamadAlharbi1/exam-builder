@@ -1,4 +1,4 @@
-# مولد الاختبار الذاتي القابل للطباعة
+# Exam Builder - مولد الاختبار الذاتي القابل للطباعة
 
 ![Next.js](https://img.shields.io/badge/Next.js-15.3.4-black)
 ![React](https://img.shields.io/badge/React-19.0.0-blue)

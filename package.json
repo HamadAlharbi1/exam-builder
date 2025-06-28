@@ -1,5 +1,5 @@
 {
-	"name": "qa-test-generator",
+	"name": "exam-builder",
 	"version": "1.0.0",
 	"description": "مولد الاختبار الذاتي القابل للطباعة - تطبيق Next.js لإنشاء نماذج اختبار ذاتي من ملفات Markdown",
 	"private": true,
@@ -7,7 +7,7 @@
 	"license": "MIT",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/yourusername/qa-test-generator.git"
+		"url": "https://github.com/HamadAlharbi1/exam-builder.git"
 	},
 	"keywords": [
 		"nextjs",
@@ -17,7 +17,8 @@
 		"printable",
 		"markdown",
 		"arabic",
-		"rtl"
+		"rtl",
+		"exam-builder"
 	],
 	"scripts": {
 		"dev": "next dev --turbopack",

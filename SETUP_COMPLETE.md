@@ -44,7 +44,7 @@
 
 ```bash
 # إضافة Remote (استبدل YOUR_USERNAME)
-git remote add origin https://github.com/YOUR_USERNAME/qa-test-generator.git
+git remote add origin https://github.com/YOUR_USERNAME/exam-builder.git
 
 # رفع الكود
 git branch -M main
@@ -55,7 +55,7 @@ git push -u origin main
 
 1. اذهب إلى [vercel.com](https://vercel.com)
 2. سجل دخول بـ GitHub
-3. اختر مستودع `qa-test-generator`
+3. اختر مستودع `exam-builder`
 4. انقر "Deploy"
 
 ## استخدام التطبيق

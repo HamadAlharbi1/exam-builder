@@ -11,7 +11,7 @@
 
 ### 2. إعداد المستودع
 
-**اسم المستودع**: `qa-test-generator`
+**اسم المستودع**: `exam-builder`
 
 **الوصف**: `مولد الاختبار الذاتي القابل للطباعة - تطبيق Next.js لإنشاء نماذج اختبار ذاتي من ملفات Markdown`
 
@@ -27,7 +27,7 @@
 
 ```bash
 # إضافة Remote للمستودع
-git remote add origin https://github.com/YOUR_USERNAME/qa-test-generator.git
+git remote add origin https://github.com/YOUR_USERNAME/exam-builder.git
 
 # رفع الكود إلى GitHub
 git branch -M main
@@ -42,7 +42,7 @@ git push -u origin main
 {
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/YOUR_USERNAME/qa-test-generator.git"
+		"url": "https://github.com/YOUR_USERNAME/exam-builder.git"
 	}
 }
 ```
