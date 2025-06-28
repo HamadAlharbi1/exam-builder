@@ -1,5 +1,10 @@
 # مولد الاختبار الذاتي القابل للطباعة
 
+![Next.js](https://img.shields.io/badge/Next.js-15.3.4-black)
+![React](https://img.shields.io/badge/React-19.0.0-blue)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue)
+![License](https://img.shields.io/badge/License-MIT-green)
+
 تطبيق Next.js لإنشاء نماذج اختبار ذاتي قابلة للطباعة من ملفات Markdown.
 
 ## المميزات
