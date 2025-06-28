@@ -1,27 +1,44 @@
 {
-  "name": "qa",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "next": "15.3.4"
-  },
-  "devDependencies": {
-    "typescript": "^5",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "@tailwindcss/postcss": "^4",
-    "tailwindcss": "^4",
-    "eslint": "^9",
-    "eslint-config-next": "15.3.4",
-    "@eslint/eslintrc": "^3"
-  }
+	"name": "qa-test-generator",
+	"version": "1.0.0",
+	"description": "مولد الاختبار الذاتي القابل للطباعة - تطبيق Next.js لإنشاء نماذج اختبار ذاتي من ملفات Markdown",
+	"private": true,
+	"author": "Hamad",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/yourusername/qa-test-generator.git"
+	},
+	"keywords": [
+		"nextjs",
+		"react",
+		"typescript",
+		"test-generator",
+		"printable",
+		"markdown",
+		"arabic",
+		"rtl"
+	],
+	"scripts": {
+		"dev": "next dev --turbopack",
+		"build": "next build",
+		"start": "next start",
+		"lint": "next lint"
+	},
+	"dependencies": {
+		"react": "^19.0.0",
+		"react-dom": "^19.0.0",
+		"next": "15.3.4"
+	},
+	"devDependencies": {
+		"typescript": "^5",
+		"@types/node": "^20",
+		"@types/react": "^19",
+		"@types/react-dom": "^19",
+		"@tailwindcss/postcss": "^4",
+		"tailwindcss": "^4",
+		"eslint": "^9",
+		"eslint-config-next": "15.3.4",
+		"@eslint/eslintrc": "^3"
+	}
 }
