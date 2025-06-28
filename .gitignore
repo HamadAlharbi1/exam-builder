@@ -112,6 +112,7 @@ questions/
 !GITHUB_SETUP.md
 !CONTRIBUTING.md
 !deploy.md
+!SETUP_COMPLETE.md
 
 # Temporary files
 tmp/
