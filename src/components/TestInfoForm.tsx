@@ -28,7 +28,7 @@ export default function TestInfoForm({ testInfo, onTestInfoChange }: TestInfoFor
 						type='text'
 						value={testInfo.title}
 						onChange={(e) => handleChange('title', e.target.value)}
-						placeholder='مثال: اختبار Flutter الأساسي'
+						placeholder='مثال: اختبار الاختبار الذاتي'
 						className='w-full border border-gray-300 rounded px-3 py-2 text-right'
 					/>
 				</div>

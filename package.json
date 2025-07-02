@@ -1,5 +1,5 @@
 {
-	"name": "exam-builder",
+	"name": "printable-exam-builder",
 	"version": "1.0.0",
 	"description": "مولد الاختبار الذاتي القابل للطباعة - تطبيق Next.js لإنشاء نماذج اختبار ذاتي من ملفات Markdown",
 	"private": true,

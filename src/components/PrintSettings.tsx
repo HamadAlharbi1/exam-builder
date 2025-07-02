@@ -1,6 +1,6 @@
 'use client';
 
-import type { PrintSettings, QuestionSelectionMode } from '@/types';
+import type { PrintSettings, QuestionSelection, QuestionSelectionMode } from '@/types';
 import { useState } from 'react';
 
 interface PrintSettingsProps {
@@ -9,25 +9,43 @@ interface PrintSettingsProps {
 	totalQuestions: number;
 }
 
+// Type guards
+function isRange(value: unknown): value is QuestionSelection['range'] {
+	return (
+		typeof value === 'object' &&
+		value !== null &&
+		'from' in value &&
+		'to' in value &&
+		typeof (value as Record<string, unknown>).from === 'number' &&
+		typeof (value as Record<string, unknown>).to === 'number'
+	);
+}
+function isSpecific(value: unknown): value is number[] {
+	return Array.isArray(value) && value.every((v) => typeof v === 'number');
+}
+
 export default function PrintSettings({ settings, onSettingsChange, totalQuestions }: PrintSettingsProps) {
 	const [specificInput, setSpecificInput] = useState(settings.questionSelection.specific?.join(', ') || '');
 
-	const handleChange = (key: keyof PrintSettings, value: any) => {
+	const handleChange = (key: keyof PrintSettings, value: PrintSettings[keyof PrintSettings]) => {
 		onSettingsChange({
 			...settings,
 			[key]: value,
 		});
 	};
 
-	const handleQuestionSelectionChange = (mode: QuestionSelectionMode, value?: any) => {
-		let questionSelection: any = { mode };
+	const handleQuestionSelectionChange = (
+		mode: QuestionSelectionMode,
+		value?: QuestionSelection['range'] | number[]
+	) => {
+		let questionSelection: QuestionSelection = { mode };
 
-		if (mode === 'range' && value) {
+		if (mode === 'range' && isRange(value)) {
 			questionSelection = {
 				...questionSelection,
 				range: value,
 			};
-		} else if (mode === 'specific') {
+		} else if (mode === 'specific' && isSpecific(value)) {
 			questionSelection = {
 				...questionSelection,
 				specific: value,
@@ -67,7 +85,7 @@ export default function PrintSettings({ settings, onSettingsChange, totalQuestio
 					<label className='text-sm font-medium text-gray-700'>نوع النموذج:</label>
 					<select
 						value={settings.printMode}
-						onChange={(e) => handleChange('printMode', e.target.value)}
+						onChange={(e) => handleChange('printMode', e.target.value as 'study' | 'test')}
 						className='border border-gray-300 rounded px-3 py-1 text-sm'
 					>
 						<option value='study'>نموذج الدراسة (سؤال + إجابة)</option>
@@ -185,7 +203,7 @@ export default function PrintSettings({ settings, onSettingsChange, totalQuestio
 								<label className='text-sm font-medium text-gray-700'>عدد الأسطر لكل إجابة:</label>
 								<select
 									value={settings.linesPerAnswer}
-									onChange={(e) => handleChange('linesPerAnswer', parseInt(e.target.value))}
+									onChange={(e) => handleChange('linesPerAnswer', Number(e.target.value) as number)}
 									className='border border-gray-300 rounded px-3 py-1 text-sm'
 								>
 									<option value={2}>2 أسطر</option>
