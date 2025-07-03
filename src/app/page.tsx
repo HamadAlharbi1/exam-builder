@@ -1,8 +1,8 @@
 'use client';
 
-import FileUpload from '@/components/FileUpload';
 import PrintableTest from '@/components/PrintableTest';
 import PrintSettingsComponent from '@/components/PrintSettings';
+import QuestionInput from '@/components/QuestionInput';
 import TestInfoForm from '@/components/TestInfoForm';
 import { PrintSettings, Question } from '@/types';
 import { useState } from 'react';
@@ -50,8 +50,8 @@ export default function Home() {
 				<div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>
 					{/* Sidebar - Controls */}
 					<div className='lg:col-span-1 space-y-6 no-print'>
-						{/* File Upload */}
-						<FileUpload onQuestionsParsed={setQuestions} />
+						{/* Question Input */}
+						<QuestionInput onQuestionsParsed={setQuestions} />
 
 						{/* Test Info Form */}
 						<TestInfoForm testInfo={testInfo} onTestInfoChange={setTestInfo} />
@@ -95,17 +95,46 @@ export default function Home() {
 									مرحباً بك في مولد الاختبار الذاتي القابل للطباعة
 								</h2>
 								<p className='text-gray-600 mb-6'>
-									ارفع ملف qa.md لبدء إنشاء نموذج الاختبار القابل للطباعة
+									اختر طريقة إدخال الأسئلة والأجوبة لبدء إنشاء نموذج الاختبار القابل للطباعة
 								</p>
 								<div className='text-sm text-gray-500'>
-									<p>تنسيق الملف المطلوب:</p>
-									<pre className='bg-gray-100 p-4 rounded mt-2 text-right'>
-										{`ما هو الاختبار الذاتي؟
-الإجابة: طريقة للتحقق من فهمك للمادة الدراسية من خلال أسئلة وإجابات
+									<p className='font-semibold mb-3'>طرق إدخال الأسئلة والأجوبة:</p>
+									<div className='bg-gray-100 p-4 rounded mt-2 text-right space-y-4'>
+										<div className='border-b pb-3'>
+											<div className='font-semibold text-blue-600 mb-2'>📄 رفع ملف Markdown</div>
+											<div className='text-xs mb-2'>
+												أنشئ ملف .md واكتب الأسئلة والأجوبة بالتنسيق التالي:
+											</div>
+											<pre className='bg-white p-2 rounded text-xs border text-right'>
+												{`ما هو الاختبار الذاتي؟
+الإجابة: طريقة للتحقق من فهمك للمادة الدراسية
 
 ما هي مميزات الاختبار الذاتي؟
 الإجابة: يساعد على تثبيت المعلومات واكتشاف نقاط الضعف`}
-									</pre>
+											</pre>
+										</div>
+
+										<div className='border-b pb-3'>
+											<div className='font-semibold text-green-600 mb-2'>📋 لصق نص مباشر</div>
+											<div className='text-xs mb-2'>
+												انسخ النص من أي مصدر والصقه مباشرة في المربع:
+											</div>
+											<pre className='bg-white p-2 rounded text-xs border text-right'>
+												{`1. ما هو التعلم النشط؟
+   الإجابة: أسلوب تعلم يعتمد على المشاركة الفعالة
+
+2. ما هي استراتيجيات الدراسة الفعالة؟
+   الإجابة: التكرار المتباعد والاختبار الذاتي`}
+											</pre>
+										</div>
+
+										<div>
+											<div className='font-semibold text-purple-600 mb-2'>✏️ إدخال يدوي</div>
+											<div className='text-xs'>
+												اكتب كل سؤال وإجابته في حقول منفصلة - مثالي للأسئلة القليلة
+											</div>
+										</div>
+									</div>
 								</div>
 							</div>
 						)}
