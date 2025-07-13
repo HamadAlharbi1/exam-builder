@@ -206,10 +206,13 @@ export default function PrintSettings({ settings, onSettingsChange, totalQuestio
 									onChange={(e) => handleChange('linesPerAnswer', Number(e.target.value) as number)}
 									className='border border-gray-300 rounded px-3 py-1 text-sm'
 								>
+									<option value={0}> بدون اسطر</option>
+									<option value={1}> سطر واحد</option>
 									<option value={2}>2 أسطر</option>
 									<option value={3}>3 أسطر</option>
 									<option value={4}>4 أسطر</option>
 									<option value={5}>5 أسطر</option>
+									<option value={7}>7 أسطر</option>
 								</select>
 							</div>
 
